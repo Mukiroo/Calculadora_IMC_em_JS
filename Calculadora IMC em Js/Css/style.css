@@ -1,0 +1,131 @@
+/* Reset de Estilos Padrão */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilos Globais */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Estilos para o cabeçalho */
+.txt {
+    text-align: center;
+    margin-top: 20px;
+    padding: 20px;
+}
+
+.txt h1 {
+    font-size: 36px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.txt h2 {
+    font-size: 24px;
+    color: #555;
+    margin-bottom: 10px;
+}
+
+.txt h4 {
+    font-size: 16px;
+    color: #777;
+    line-height: 1.5;
+    text-align: center;
+    margin-top: 10px;
+}
+
+/* Estilos para o formulário */
+.Up {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    padding: 20px;
+    margin: 20px auto;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+.calcular {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.input-group {
+    display: flex;
+    flex-direction: column;
+    width: 48%;
+}
+
+.input-group label {
+    font-size: 14px;
+    color: #555;
+    margin-bottom: 5px;
+}
+
+.input-group input {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.resultado {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.resultado input {
+    display: inline-block;
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.resultado input:hover {
+    background-color: #0056b3;
+}
+
+/* Estilos para a tabela */
+table {
+    border-collapse: collapse;
+    width: 100%;
+    margin-top: 20px;
+}
+
+table, th, td {
+    border: 1px solid #ddd;
+}
+
+th, td {
+    padding: 10px;
+    text-align: center;
+}
+
+th {
+    background-color: #f0f0f0;
+}
+
+tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+/* Ajuste de responsividade para telas pequenas */
+@media screen and (max-width: 600px) {
+    table {
+        font-size: 12px;
+    }
+}

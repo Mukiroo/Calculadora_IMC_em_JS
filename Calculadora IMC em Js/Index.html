@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Css/style.css">
+    <title>Calculadora IMC</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="txt">
+            <H1>Calculadora IMC</H1>
+            <H2>Site voltado para calcular o seu IMC</H2>
+            <h4>O índice de massa corporal é uma medida internacional<br>
+                usada para calcular se uma pessoa está no peso ideal.
+            </h4>
+        </div>
+    <Form class="Up">
+        <div class="calcular">
+            <div class="input-group">
+                <label for="altura">Altura (metros)</label>
+                <input type="number" id="altura" placeholder="Altura">
+            </div>
+            <div class="input-group">
+                <label for="peso">Peso (kg)</label>
+                <input type="number" id="peso" placeholder="Peso">
+            </div>
+        </div>
+        <div class="resultado">
+            <input type="button" value="Calcular IMC">
+        </div>
+    
+    </Form>
+
+    <script>
+      
+    document.addEventListener("DOMContentLoaded", function() {
+        const calcularButton = document.querySelector(".resultado input");
+        const pesoInput = document.getElementById("peso");
+        const alturaInput = document.getElementById("altura");
+        const resultadoDiv = document.querySelector(".resultado");
+
+        calcularButton.addEventListener("click", calcularIMC);
+
+        function calcularIMC() {
+            const peso = parseFloat(pesoInput.value);
+            const altura = parseFloat(alturaInput.value);
+
+            if (isNaN(peso) || isNaN(altura) || altura <= 0 || peso <= 0) {
+                resultadoDiv.innerHTML = "<p>Preencha os valores corretamente.</p>";
+                return;
+            }
+
+            const imc = peso / (altura * altura);
+            const resultado = `Seu IMC é ${imc.toFixed(2)}.`;
+
+            resultadoDiv.innerHTML = `<p>${resultado}</p>`;
+        }
+    });
+    </script>
+
+
+<table border="1">
+    <tr>
+        <th>IMC (kg/m²)</th>
+        <th>Classificação</th>
+    </tr>
+    <tr>
+        <td>Menor De 18,5</td>
+        <td>Magreza</td>
+    </tr>
+    <tr>
+        <th>18,5 a 24,9</th>
+        <th>Peso normal</th>
+    </tr>
+    <tr>
+        <td>25 a 29,9</td>
+        <td>Sobrepeso</td>
+    </tr>
+    <tr>
+        <td>30 a 34,9</td>
+        <td>Obesidade grau I</td>
+    </tr>
+    <tr>
+        <td>35 a 40</td>
+        <td>Obesidade grau II</td>
+    </tr>
+    <tr>
+        <td>Maior que 40</td>
+        <td>Obesidade grau III</td>
+    </tr>
+</table>
+</body>
+</html>
